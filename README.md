@@ -53,6 +53,8 @@ app/
     users/              # модели, схемы, сервис и маршруты для пользователей
     hotels/             # модели отелей и комнат, схемы, сервисы и маршруты
     bookings/           # модели бронирований, схемы, сервис и маршруты
+  services/             # Бизнес-логика
+  queries/              # Часто используемы запросы
   frontend/
     templates/          # Jinja2‑шаблоны (hotels.html)
     static/             # статические файлы (css, js, изображения)
@@ -61,7 +63,7 @@ app/
   tasks/
     tasks.py            # Celery‑задачи для обработки изображений и отправки email
     worker.py           # конфигурация Celery и подключение к Redis
-    tests/              # тесты pytest
+  tests/              # тесты pytest
 migrations/
   env.py                # конфигурация Alembic
   versions/             # миграции
@@ -72,9 +74,12 @@ migrations/
 
 Клонируйте репозиторий
 
+```
 git clone https://github.com/kif1r4ek/SimpleAPIBookings.git
+```
+```
 cd SimpleAPIBookings
-
+```
 
 Создайте виртуальное окружение и установите зависимости
 
