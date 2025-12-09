@@ -1,0 +1,88 @@
+
+.venv/
+venv/
+env/
+ENV/
+.venv*/
+venv*/
+env*/
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Сборки/пакеты
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+
+# Кэш/временные файлы
+*.log
+*.pot
+*.py,cover
+*.cover
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+.mypy_cache/
+.pytest_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# Базы для разработки/тестов (если не хочешь их коммитить)
+*.sqlite3
+*.db
+
+# Переменные окружения (Pydantic Settings)
+.env
+.env.*
+*.env
+
+# Локальные конфиги
+*.local
+*.secret
+*.token
+*.pem
+*.key
+
+# Поэтому игнорируем только кэш/байткод
+alembic/__pycache__/
+alembic/versions/__pycache__/
+
+
+
+# Redis дампы (если локальные)
+dump.rdb
+appendonly.aof
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+
+
+.tox/
+.nox/
+pytestdebug.log
+
+
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+out/
+
+# Node / frontend (на случай, если будешь собирать фронт)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+

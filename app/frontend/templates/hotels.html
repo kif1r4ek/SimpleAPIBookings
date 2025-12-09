@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Отели</title>
+</head>
+<body>
+	<div>
+		{% for hotel in hotels %}
+		<div>
+			<h1>{{ hotel.name }}</h1>
+			<img src="{{ url_for('static', path='img/' + hotel.image_id|string + '.jpg') }}" alt="Фото отеля"
+			     width="300px">
+			<h3>{{ hotel.location }}</h3>
+		</div>
+		{% endfor %}
+	</div>
+</body>
+</html>

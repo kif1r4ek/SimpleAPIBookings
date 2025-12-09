@@ -1,0 +1,63 @@
+[tool.black]
+line-length = 88          # ширина строки (по умолчанию 88, можно поставить 100/120)
+target-version = ["py312"]  # версии Python, под которые форматируем
+skip-string-normalization = false  # если true — не трогает кавычки
+skip_magic_trailing_comma = false  # если true — не добавляет "магические" запятые
+
+# Какие файлы/папки форматировать
+include = '\.pyi?$'
+
+# Что игнорировать (регулярка)
+exclude = '''
+(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | migrations
+  | alembic
+)
+'''
+
+[tool.flake8]
+max-line-length = 88
+exclude = [
+  ".git",
+  "__pycache__",
+  ".venv",
+  "venv",
+  "build",
+  "dist",
+  "migrations",
+  "alembic",
+]
+ignore = ["E203", "W503"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+skip = [
+  ".venv",
+  "venv",
+  "migrations",
+  "alembic",
+]
+
+
+[tool.autoflake]
+in_place = true
+remove_all_unused_imports = true
+remove_unused_variables = false
+ignore_init_module_imports = true
+recursive = true
+exclude = [
+  ".venv",
+  "venv",
+  "migrations",
+  "alembic",
+  "__pycache__",
+]
